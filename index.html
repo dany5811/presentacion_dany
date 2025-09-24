@@ -2,11 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <h1>Bienvenidos a mi Carrusel Exprés</h1>
-  <p style="text-align:center; font-size:18px; max-width:600px; margin:auto;">
-  Pensé en muchas formas de presentarme, y al final decidí que lo mejor era mostrar quién soy a través de momentos reales. Esta página es un recorrido visual por mis experiencias, mis pasiones y mi estilo de vida. ¡Gracias por estar aquí!
-  </p>
-
+  <title>Presentación Dany</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,6 +13,14 @@
 
     h1 {
       text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
       margin-bottom: 30px;
     }
 
@@ -112,12 +116,13 @@
 </head>
 <body>
 
-  <h1>Presentación Dany</h1>
+  <h1>Bienvenidos a mi Carrusel Exprés</h1>
+  <p>Pensé en muchas formas de presentarme, y al final decidí que lo mejor era mostrar quién soy a través de momentos reales. Esta página es un recorrido visual por mis experiencias, mis pasiones y mi estilo de vida. ¡Gracias por estar aquí!</p>
 
   <div class="carousel">
-    <figure class="item" onclick="openModal(0)">
+    <figure class="item" onclick="abrirCarruselAuto()">
       <img src="imagenes/dany3.jpg" alt="Dany 1">
-      <figcaption>Dany en la playa</figcaption>
+      <figcaption>Pues viajando a un lugar muy lejano... ese es Dany de niño. La verdad, no tengo mucha conciencia de mi infancia, pero en términos generales nací el 5 de marzo de 2003 en Toluca de Lerdo.</figcaption>
     </figure>
     <figure class="item" onclick="openModal(1)">
       <video src="imagenes/simba.mp4" muted></video>
@@ -157,12 +162,19 @@
     </figure>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal interactivo -->
   <div id="modal" class="modal" onclick="closeModal()">
     <span class="close" onclick="closeModal()">×</span>
     <div class="modal-content" id="modalContent"></div>
     <div class="modal-text" id="modalText"></div>
     <button class="next-button" onclick="nextItem(event)">Siguiente</button>
+  </div>
+
+  <!-- Modal automático -->
+  <div id="modalAuto" class="modal" onclick="cerrarCarruselAuto()">
+    <span class="close" onclick="cerrarCarruselAuto()">×</span>
+    <img id="imagenAuto" src="" alt="Carrusel automático">
+    <div class="modal-text" id="textoAuto"></div>
   </div>
 
   <script>
@@ -214,7 +226,38 @@
       currentIndex = (currentIndex + 1) % items.length;
       openModal(currentIndex);
     }
+
+    // Carrusel automático
+    const imagenesAuto = [
+      { src: 'imagenes/imagen1.jpg', texto: 'Un recuerdo especial en la playa.' },
+      { src: 'imagenes/imagen2.jpg', texto: 'Explorando nuevos caminos.' },
+      { src: 'imagenes/imagen3.jpg', texto: 'Un momento de reflexión y calma.' }
+          let indexAuto = 0;
+    let intervaloAuto;
+
+    function abrirCarruselAuto() {
+      document.getElementById('modalAuto').style.display = 'flex';
+      mostrarImagenAuto();
+      intervaloAuto = setInterval(() => {
+        indexAuto = (indexAuto + 1) % imagenesAuto.length;
+        mostrarImagenAuto();
+      }, 3000); // cambia cada 3 segundos
+    }
+
+    function mostrarImagenAuto() {
+      const img = document.getElementById('imagenAuto');
+      const texto = document.getElementById('textoAuto');
+      img.src = imagenesAuto[indexAuto].src;
+      texto.innerText = imagenesAuto[indexAuto].texto;
+    }
+
+    function cerrarCarruselAuto() {
+      document.getElementById('modalAuto').style.display = 'none';
+      clearInterval(intervaloAuto);
+      indexAuto = 0;
+    }
   </script>
 
 </body>
 </html>
+

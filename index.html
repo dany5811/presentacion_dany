@@ -2,7 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Presentación Dany</title>
+  <h1>Bienvenidos a mi Carrusel Exprés</h1>
+  <p style="text-align:center; font-size:18px; max-width:600px; margin:auto;">
+  Pensé en muchas formas de presentarme, y al final decidí que lo mejor era mostrar quién soy a través de momentos reales. Esta página es un recorrido visual por mis experiencias, mis pasiones y mi estilo de vida. ¡Gracias por estar aquí!
+  </p>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,14 +17,6 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      font-size: 18px;
-      max-width: 600px;
-      margin: auto;
       margin-bottom: 30px;
     }
 
@@ -116,65 +112,112 @@
 </head>
 <body>
 
-  <h1>Bienvenidos a mi Carrusel Exprés</h1>
-  <p>Pensé en muchas formas de presentarme, y al final decidí que lo mejor era mostrar quién soy a través de momentos reales. Esta página es un recorrido visual por mis experiencias, mis pasiones y mi estilo de vida. ¡Gracias por estar aquí!</p>
+  <h1>Presentación Dany</h1>
 
   <div class="carousel">
-    <figure class="item" onclick="abrirCarruselAuto()">
+    <figure class="item" onclick="openModal(0)">
       <img src="imagenes/dany3.jpg" alt="Dany 1">
-      <figcaption>Pues viajando a un lugar muy lejano... ese es Dany de niño. La verdad, no tengo mucha conciencia de mi infancia, pero en términos generales nací el 5 de marzo de 2003 en Toluca de Lerdo.</figcaption>
+      <figcaption>Pues viajando a un lugar muy lejano... ese es Dany de niño. La verdad, no tengo mucha conciencia de mi infancia, 
+      pero en términos generales nací el 5 de marzo de 2003 en Toluca de Lerdo.</figcaption>
     </figure>
     <figure class="item" onclick="openModal(1)">
       <video src="imagenes/simba.mp4" muted></video>
-      <figcaption>Simba jugando</figcaption>
+      <figcaption>
+        Me encantan los gatos, y si se trata de rescatarlos, soy el primero en apuntarme.
+        Uno de mis sueños es tener un refugio donde puedan tener una vida digna,
+        junto con perritos que viven en la calle.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(2)">
       <img src="imagenes/dany5.jpg" alt="Dany 3">
-      <figcaption>Dany en el parque</figcaption>
+      <figcaption>
+        Disfruto mucho ir al mar y quedarme lejos de la orilla por largo tiempo.
+        Solo el mar y yo.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(3)">
       <video src="imagenes/playa.mp4" muted></video>
-      <figcaption>Atardecer en la playa</figcaption>
+      <figcaption>
+        Mi lugar favorito es Tabasco Paylebot, donde el mar al que voy es el rincón más tranquilo.
+        En ese mar, no hay nadie más.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(4)">
       <img src="imagenes/manejo.mp4" alt="Dany manejando">
-      <figcaption>Dany manejando</figcaption>
+      <figcaption>
+        Otra cosa que me apasiona es manejar.
+        Ya sea en auto o en moto, soy feliz al volante.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(5)">
       <video src="imagenes/ram.mp4" muted></video>
-      <figcaption>Recorrido en RAM</figcaption>
+      <figcaption>
+        Las carreteras amplias me fascinan.
+        Cuando uno va a más de 200 km/h, parece que flotamos...
+        claro, siempre con todas las precauciones.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(6)">
       <img src="imagenes/tatto1.mp4" alt="Tatuaje 1">
-      <figcaption>Primer tatuaje</figcaption>
+      <figcaption>
+        Uno de mis hobbies son los tatuajes.
+        No tengo muchos, pero me encantan.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(7)">
       <video src="imagenes/tatto2.mp4" muted></video>
-      <figcaption>Segundo tatuaje</figcaption>
+      <figcaption>
+        Acabo de comenzar a tatuar, y me relaja profundamente.
+        Ya tengo mi máquina y estoy en plena práctica.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(8)">
       <img src="imagenes/moka.jpg" alt="Moka">
-      <figcaption>Moka descansando</figcaption>
+      <figcaption>
+        Ella es Moka, una gatita que me hace feliz...
+        aunque a veces me rasguña.
+      </figcaption>
     </figure>
+
     <figure class="item" onclick="openModal(9)">
-      <video src="imagenes/simba.mp4" muted></video>
-      <figcaption>Simba otra vez</figcaption>
+      <video src="imagenes/vi.jpg" muted></video>
+      <figcaption>
+        Mi persona favorita es Vi. La conocí este año y le dio brillo a mi vida.
+        Me ayudó más de lo que ella puede imaginar.
+        Es alguien que quiero tener en mi vida para siempre.
+        Hace unos meses abrimos una taquería juntos, y ha sido una de las experiencias que marcarán mi historia.
+        Las palabras para Vi son más de las que podría decir en mil vidas.
+        Sin duda, es la persona que más agradezco haber conocido.
+      </figcaption>
     </figure>
+
+    <figure class="item" onclick="openModal(10)">
+      <img src="imagenes/Danyyo.jpg" alt="Dany">
+      <figcaption>
+        Estos son algunos momentos de mi vida. Faltan muchos más, pero esto sería infinito.
+        Mis metas están claras: quiero un futuro en paz.
+        Mis padres son un pilar fuerte, y estoy profundamente agradecido con ellos.
+        Me falta disciplina, pero es algo en lo que estoy trabajando.
+        Hasta ahora, todo va bien. No me puedo quejar, aunque sé que puede ser mejor.
+        Y esto es un poco de mí. Espero que sea de su agrado. Gracias.
+      </figcaption>
+    </figure>
+
   </div>
 
-  <!-- Modal interactivo -->
+  <!-- Modal -->
   <div id="modal" class="modal" onclick="closeModal()">
     <span class="close" onclick="closeModal()">×</span>
     <div class="modal-content" id="modalContent"></div>
     <div class="modal-text" id="modalText"></div>
     <button class="next-button" onclick="nextItem(event)">Siguiente</button>
-  </div>
-
-  <!-- Modal automático -->
-  <div id="modalAuto" class="modal" onclick="cerrarCarruselAuto()">
-    <span class="close" onclick="cerrarCarruselAuto()">×</span>
-    <img id="imagenAuto" src="" alt="Carrusel automático">
-    <div class="modal-text" id="textoAuto"></div>
   </div>
 
   <script>
@@ -226,37 +269,7 @@
       currentIndex = (currentIndex + 1) % items.length;
       openModal(currentIndex);
     }
-
-    // Carrusel automático
-    const imagenesAuto = [
-      { src: 'imagenes/patomas.jpg', texto: 'El es mi busabuelo.' },
-      { src: 'imagenes/majuana.jpg', texto: 'Ella es mi bisabuela.' },
-          let indexAuto = 0;
-    let intervaloAuto;
-
-    function abrirCarruselAuto() {
-      document.getElementById('modalAuto').style.display = 'flex';
-      mostrarImagenAuto();
-      intervaloAuto = setInterval(() => {
-        indexAuto = (indexAuto + 1) % imagenesAuto.length;
-        mostrarImagenAuto();
-      }, 3000); // cambia cada 3 segundos
-    }
-
-    function mostrarImagenAuto() {
-      const img = document.getElementById('imagenAuto');
-      const texto = document.getElementById('textoAuto');
-      img.src = imagenesAuto[indexAuto].src;
-      texto.innerText = imagenesAuto[indexAuto].texto;
-    }
-
-    function cerrarCarruselAuto() {
-      document.getElementById('modalAuto').style.display = 'none';
-      clearInterval(intervaloAuto);
-      indexAuto = 0;
-    }
   </script>
 
 </body>
 </html>
-

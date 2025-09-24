@@ -219,57 +219,5 @@
     <div class="modal-text" id="modalText"></div>
     <button class="next-button" onclick="nextItem(event)">Siguiente</button>
   </div>
-
-  <script>
-    const items = [
-      { src: 'imagenes/dany3.jpg', type: 'image', text: 'Dany en la playa' },
-      { src: 'imagenes/simba.mp4', type: 'video', text: 'Simba jugando' },
-      { src: 'imagenes/dany5.jpg', type: 'image', text: 'Dany en el parque' },
-      { src: 'imagenes/playa.mp4', type: 'video', text: 'Atardecer en la playa' },
-      { src: 'imagenes/manejo.mp4', type: 'image', text: 'Dany manejando' },
-      { src: 'imagenes/ram.mp4', type: 'video', text: 'Recorrido en RAM' },
-      { src: 'imagenes/tatto1.mp4', type: 'image', text: 'Primer tatuaje' },
-      { src: 'imagenes/tatto2.mp4', type: 'video', text: 'Segundo tatuaje' },
-      { src: 'imagenes/moka.jpg', type: 'image', text: 'Moka descansando' },
-      { src: 'imagenes/simba.mp4', type: 'video', text: 'Simba otra vez' }
-    ];
-
-    let currentIndex = 0;
-
-    function openModal(index) {
-      currentIndex = index;
-      const modal = document.getElementById('modal');
-      const content = document.getElementById('modalContent');
-      const text = document.getElementById('modalText');
-      content.innerHTML = '';
-
-      const item = items[index];
-      if (item.type === 'image') {
-        const img = document.createElement('img');
-        img.src = item.src;
-        content.appendChild(img);
-      } else if (item.type === 'video') {
-        const video = document.createElement('video');
-        video.src = item.src;
-        video.controls = true;
-        video.autoplay = true;
-        content.appendChild(video);
-      }
-
-      text.innerText = item.text;
-      modal.style.display = 'flex';
-    }
-
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-
-    function nextItem(event) {
-      event.stopPropagation();
-      currentIndex = (currentIndex + 1) % items.length;
-      openModal(currentIndex);
-    }
-  </script>
-
 </body>
 </html>
